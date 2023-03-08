@@ -1,6 +1,28 @@
-# Testing multiple cameras in o3de-ros
+# Testing multiple cameras in o3de-ros 
 
-# Depth Only
+# Testing PR 1439 (most recent)
+
+### RGBD Cameras 
+Cached shadows:
+
+```
+camera 0, avg : 0.024172 ms std_dev: 0.016395 ms
+camera 1, avg : 0.024172 ms std_dev: 0.016396 ms
+camera 2, avg : 0.024172 ms std_dev: 0.016395 ms
+camera 3, avg : 0.024172 ms std_dev: 0.016396 ms
+```
+
+Uncached shadows:
+```
+camera 0, avg : 0.028684 ms std_dev: 0.022370 ms
+camera 1, avg : 0.028684 ms std_dev: 0.022369 ms
+camera 2, avg : 0.028684 ms std_dev: 0.022370 ms
+camera 3, avg : 0.028684 ms std_dev: 0.022369 ms
+```
+
+# Older results
+## Testing o3de-development (3 march 2023)
+### Depth Only
 
 - Depth only
 - 4 camera 30 FPS 640x480 with subscription
@@ -19,7 +41,7 @@ camera 2, avg : 0.038327 ms std_dev: 0.024009 ms
 camera 3, avg : 0.038327 ms std_dev: 0.024011 ms
 ```
 
-# RGBD 
+### RGBD 
 - RGBD , 4 camera 30 FPS 640x480 with subscription
 We can see:
 - Request frame is more consistent,
@@ -36,7 +58,7 @@ camera 2, avg : 0.092022 ms std_dev: 0.041835 ms
 camera 3, avg : 0.092022 ms std_dev: 0.041841 ms
 ```
 
-# RGB
+### RGB
 
 Similar performance to RGBD with expected downgrade to depth readout.
 
@@ -48,7 +70,7 @@ camera 2, avg : 0.085233 ms std_dev: 0.036241 ms
 camera 3, avg : 0.085233 ms std_dev: 0.036238 ms
 ```
 
-# One RGB
+### One RGB
 ![](one_Cam.png)
 
 ```
@@ -56,21 +78,3 @@ camera 0, avg : 0.046309 ms std_dev: 0.018214 ms
 ```
 
 
-# Testing PR 1439
-
-Cached shadows:
-
-```
-camera 0, avg : 0.024172 ms std_dev: 0.016395 ms
-camera 1, avg : 0.024172 ms std_dev: 0.016396 ms
-camera 2, avg : 0.024172 ms std_dev: 0.016395 ms
-camera 3, avg : 0.024172 ms std_dev: 0.016396 ms
-```
-
-Uncached shadows:
-```
-camera 0, avg : 0.028684 ms std_dev: 0.022370 ms
-camera 1, avg : 0.028684 ms std_dev: 0.022369 ms
-camera 2, avg : 0.028684 ms std_dev: 0.022370 ms
-camera 3, avg : 0.028684 ms std_dev: 0.022369 ms
-```
