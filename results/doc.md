@@ -54,3 +54,23 @@ camera 3, avg : 0.085233 ms std_dev: 0.036238 ms
 ```
 camera 0, avg : 0.046309 ms std_dev: 0.018214 ms
 ```
+
+
+# Testing PR 1439
+
+Cached shadows:
+
+```
+camera 0, avg : 0.024172 ms std_dev: 0.016395 ms
+camera 1, avg : 0.024172 ms std_dev: 0.016396 ms
+camera 2, avg : 0.024172 ms std_dev: 0.016395 ms
+camera 3, avg : 0.024172 ms std_dev: 0.016396 ms
+```
+
+Uncached shadows:
+```
+camera 0, avg : 0.028684 ms std_dev: 0.022370 ms
+camera 1, avg : 0.028684 ms std_dev: 0.022369 ms
+camera 2, avg : 0.028684 ms std_dev: 0.022370 ms
+camera 3, avg : 0.028684 ms std_dev: 0.022369 ms
+```
